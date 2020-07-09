@@ -15,3 +15,16 @@ after_success:
     - docker push danieljeney/complex-nginx
     - docker push danieljeney/complex-server
     - docker push danieljeney/complex-worker
+#If you had an aws deployment environment you d do this
+#deploy:
+#    edge: true
+#    provider: elasticbeanstalk
+#    region: us-west-1
+#    app: multi-docker
+#    env: MultiDocker-env
+#    bucket_name: elasticbeanstalk-us-west-1-306476627547
+#    bucket_path: docker-multi
+#    on:
+#        branch: master
+#    access_key_id: $AWS_ACCESS_KEY
+#    secret_access_key: $AWS_SECRET_KEY
